@@ -1,0 +1,13 @@
+.grid {
+   display: grid;
+   grid-template-columns: repeat(9, 1fr);
+   justify-items: center;
+   padding:10px 0;
+}
+
+.main {
+   font-size: 20px;
+   font-family:'Times New Roman', Times, serif;
+   color:blue;
+}
+

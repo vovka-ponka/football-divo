@@ -1,0 +1,284 @@
+.grid {
+   display: grid;
+   grid-template-columns: 2fr 10fr 3fr;
+   grid-template-rows: repeat(3, auto);
+   text-align: center;
+
+   p {
+      border-bottom: 1px solid #60993a;
+      color:#60993a;;
+   }
+}
+
+
+
+
+
+.menu_left {
+   div {
+      padding: 5px 0;
+   }
+   .mail_game {
+      ul{
+         display: flex;
+         justify-content: center;
+      }
+   }
+   .team {
+      
+      
+   }
+   .awards {
+      ul{
+         display: flex;
+         justify-content: center;
+      }
+   }
+   .trainer_exchange {
+      p {
+         padding-top:20px;
+      }
+      ul {
+         padding-top: 10px;
+         li {
+            margin: 3px 0;
+         }
+      }
+   }
+   .management {
+      background-color:#65ad5f;
+      a {
+      color: #FFF;
+      font-size: 16px;
+      }
+      :hover {
+         color: red;
+         text-decoration: underline;
+      }
+   }
+}
+
+
+
+
+
+
+.menu_center {
+   div {
+      padding: 5px 0;
+   }
+   font-size: 16px;
+   .roster_table{
+      padding: 0 20px;
+      .roster_and_team_strength {
+         color:#878886;
+         border-bottom: 2px solid #878886;
+         margin-bottom: 5px;
+         display: flex;
+         justify-content: space-between;
+         padding: 0 0 ;
+         font-size: 20px;
+   
+      }
+      .roster_title {
+         display:grid;
+         grid-template-columns: 30px 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+         text-align: center;
+         background-color:#65ad5f;
+         color: white;
+      }
+      .roster_name {
+         display:grid;
+         grid-template-columns: 30px 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+         border: 1px solid #91948f;
+            .name {
+               text-decoration:underline;
+               text-align: left;
+               padding-left: 5px;
+             &:hover {
+               color: #65ad5f;
+               cursor: pointer;
+               }
+          }
+      }
+   }
+
+   .team_data {
+      display: grid;
+      grid-template-columns: 3fr 3fr 4fr;
+      text-align: center;
+      padding:15px 30px;
+      .forward_department {
+         margin: 0 10px;
+         .forward_title {
+            background-color:#65ad5f;
+            color: #FFF;
+               
+          }
+          .table_team_data {
+            border: 1px solid #65ad5f;
+               .forward {
+                  display: flex;
+                  justify-content: flex-start;
+                  padding:0 5px;
+                     .forward_two {
+                        // padding-right: 7px;
+                        padding-left: 10px;
+                        width: 90%;
+                        text-align: left;
+                     }
+                     .forward_name_damage {
+                        width: 50%;
+                        text-align: left;
+                        padding-left: 10px;
+                     }
+                     .forward_name_damage_last {
+                        align-self: flex-end;
+                        padding-left: 20px;
+                     }
+               }
+
+         }
+      }
+   }
+}
+
+
+
+
+
+
+.menu_right {
+   padding: 5px 0;
+   .matches {
+      border: 2px solid #65ad5f;
+      .matches_title {
+         background-color:#65ad5f;
+         color: #FFF;
+         padding: 5px 0;
+         font-size: 16px;
+      }
+      .matches_data_and_name {
+         background-color: #d9dbd7;
+         color:#60993a;
+         margin-top: 3px;
+         font-size: 12px;
+      }
+      .teams {
+         display: flex;
+         justify-content: space-around;
+         font-size: 16px;
+         padding: 5px 0;
+            .teams_time {width: 10%;}
+            .teams_one {width: 40%;}
+            .teams_two {width: 40%;}
+            .teams_score_no_game {
+               width: 10%;
+               a{
+               background-color:#d9dbd7 ;
+               padding-left: 5px ;
+               padding-right: 5px ;
+               padding-top: 0px;
+               padding-bottom: 0px;
+               }
+            }
+      }
+   }
+   .management {
+      background-color:#65ad5f;
+      margin:10px 3px;
+      padding: 5px;
+      a {
+      color: #FFF;
+      font-size: 16px;
+      }
+      :hover {
+         color: red;
+         text-decoration: underline;
+      }
+   }
+}
+
+
+
+
+
+.tactic_title {
+   grid-column-start:1 ;
+   grid-column-end:4 ;
+   text-align: left;
+      .tactic_title_name {
+         font-size: 24px;
+         color: #878886;
+         border-bottom: 2px solid #878886;
+         margin-top: 20px;
+         margin-bottom: 10px;
+         text-align: center;
+      }
+      .tactic_two_buttons {
+         display: flex;
+         justify-content: space-between;
+         margin: 20px 0 20px 0;
+            .tactic_button button {
+               padding: 5px 10px;
+               background-color: #65ad5f;
+               font-size: 20px;
+               color: #FFF;
+            }
+            .tactic_select select {
+               border: 1px solid #878886;
+            }
+      }
+      .tactic_block {
+         display: flex;
+         justify-content: space-between;
+         text-align: center;
+         .tactic_block_another {
+            width: 25%;
+         }
+      }
+      .protection_name {
+         margin: 20px 0 5px 0;
+      }
+
+      .protection_name_flex{
+         display:flex;
+         div {
+            width: 100%; 
+            border: 1px solid #91948f;
+            margin: 0 5px;
+            padding: 3px 0;
+         }
+        
+      }
+
+      .tactic_block_another {
+         padding-left: 15px;
+         padding-right: 15px ;
+      }
+
+}
+
+
+
+.tactic_squad {
+   display: inline-block;
+   font-size: 16px;
+   padding: 5px 40px;
+
+      div {
+         display: flex;
+         margin-left: 2px ;
+         margin-right:2px ;
+         padding: 7px;
+         border: 1px solid #91948f;
+      }
+      .name_and_position {
+         padding: 7px;
+         border: none;
+      }
+}
+
