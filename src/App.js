@@ -13,6 +13,7 @@ import Email from './components/Email/Email.jsx';
 import Transfers from './components/Transfers/Transfers.jsx';
 import Campionship from './components/Campionship/Campionship.jsx';
 import Player from './components/Player/Player';
+import Game from './components/Game/Game';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/transfers" element={<Transfers />} />
           <Route path="/championship" element={<Campionship />} />
           <Route path="/player" element={<Player />} />
+          <Route path="/game" element={<Game />} />
         </Routes>
       </div>
     </div>
