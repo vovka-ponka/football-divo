@@ -2,41 +2,53 @@ import React from 'react';
 import styles from './game.module.scss';
 
 function Game() {
-  // let actions = [];
   let half = 0;
-  let moment1 = 0;
-  let moment2 = 0;
+  let moment = 0;
   let actionNow;
+  let momentAll = 0;
   let action = ['пас', 'Удар і промазав', 'Удар та гоооласос', 'Прохід', 'втратив мяча'];
 
   const [actions, setActions] = React.useState([]);
-
   React.useEffect(() => {
     console.log(actions);
   }, [actions]);
 
-  const addActions = () => {
-    actionNow = action[Math.floor(Math.random() * action.length)];
-    const newArr = [...actions, actionNow];
-    setActions(newArr);
-  };
-
   const run = () => {
     do {
-      if (half === 0 && moment1 < 20 && moment2 < 20) {
-        // addActions();
+      if (half === 0 && moment <= 41) {
+        if (moment === 0) {
+          actionNow = 'Почався 1 тайм!';
+          actions[moment] = actionNow;
+          const newArr = [...actions, actionNow];
+          setActions(newArr);
+          moment++;
+        }
         actionNow = action[Math.floor(Math.random() * action.length)];
-        actions[moment1] = actionNow;
+        actions[moment] = actionNow;
         const newArr = [...actions, actionNow];
         setActions(newArr);
 
-        moment1++;
-        console.log(moment1);
-        console.log(actions);
-      } else if (half === 1 && moment1 > 0 && moment2 > 0) {
+        momentAll++;
+        if (moment === 41) {
+          half = 1;
+          actionNow = 'Почався 2 тайм!';
+          actions[moment] = actionNow;
+          const newArr = [...actions, actionNow];
+          setActions(newArr);
+          console.log(moment);
+          console.log(newArr);
+        }
+        moment++;
+      } else if (half === 1 && moment <= 82) {
+        actionNow = action[Math.floor(Math.random() * action.length)];
+        actions[moment] = actionNow;
+        const newArr = [...actions, actionNow];
+        setActions(newArr);
+        moment++;
+        momentAll++;
       } else {
       }
-    } while (moment1 < 20);
+    } while (momentAll < 82);
   };
 
   return (
